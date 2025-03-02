@@ -47,6 +47,7 @@ app.post("/parse", (req:Request, res:Response) => {
 // Takes in a recipeName and returns it in a form that 
 const parse_handwriting = (recipeName: string): string | null => {
   // TODO: implement me
+  // most normal looking regex
   let parsedName = recipeName.replace(/[1234567890!@#$%&*()\\/+=]/g, "").replace(/[_-]/g, " ");
   let splitName = parsedName.split(" ")
 
@@ -106,46 +107,12 @@ app.post("/entry", (req:Request, res:Response) => {
 // Endpoint that returns a summary of a recipe that corresponds to a query name
 app.get("/summary", (req:Request, res:Request) => {
   // // TODO: implement me
-  // let superRecipe: recipe = req.body;
-  // for (let i = 0; i < superRecipe.requiredItems.length; i++) {
-  //   let name = superRecipe.requiredItems[i].name;
-  //   for (let j = 0; j < cookbook.length; i++) {
-  //     if (name == cookbook[j].name && cookbook[j].type == "recipe") {
-  //       // // ok so we found a recipe has a required ingredient
-  //       // // lets search through that recipe now 
-  //       // // we can pass in the cookbook index and the name
-  //       // // getIngredients(cookbook[j] as recipe, j);
-  //       // let nextRecipe = cookbook[i] as recipe;
-  //       // let addIngredients = [];
-  //       // for (let k = 0; k < nextRecipe.requiredItems.length; k++) {
-  //       //   addIngredients.push(nextRecipe[i]);
-  //       // }
-  //       // let isIncluded: Boolean = false;
-  //       // }
-  //       superRecipe.requiredItems.splice(i);
-  //       let entry: recipe = cookbook[j] as recipe;
-  //       let stuff = [];
-  //       for (let k = 0; k < entry.requiredItems.length; k++) {
-  //         let addIng = superRecipe.requiredItems.findIndex(ingName => ingName.name == entry.requiredItems[k].name && entry.requiredItems[k].);
-  //         if (addIng) {
-            
-  //         }
-  //         else {
 
-  //         }
-  //       }
-  //       for (let k = 0; k < entry.requiredItems.length; k++)
-  //       let addIng = superRecipe.requiredItems.findIndex(ingName => ingName.name ==)
-  //     }
-      
-  //     }
-  // }
-  res.status(500).send("not yet implemented!")
+
+  res.status(500).send(req);
 
 });
 
-
-  // TODO: implement me
 
 
 
